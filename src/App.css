@@ -2,6 +2,7 @@
 
   --primary-color: #464775;
   --primary-dark-color: #33344a;
+  --light-color: #fff;
 
   --btn-primary: #6264a7;
 
@@ -19,6 +20,18 @@
 ********************************************************/
 body {
   background-color: var(--bg-light);
+}
+.mb-5 {
+  margin-bottom: 25px;
+}
+.mt-5 {
+  margin-top: 25px;
+}
+.backbutton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /********************************************************
@@ -94,6 +107,9 @@ body {
   align-items: center;
   background-color: var(--bg-light);
 }
+.login .container {
+  width: 100%;
+}
 .login main {
   display: flex;
   flex-direction: column;
@@ -137,4 +153,39 @@ body {
 }
 .login__buttons button {
   margin: 15px 0 !important;
+}
+
+/********************************************************
+  LOGIN WITH EMAIL AND PASSWORD
+********************************************************/
+.loginWithEmailAndPassword {
+
+}
+.loginWithEmailAndPassword main .heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.loginWithEmailAndPassword main .heading h1 {
+  font-weight: 900;
+  color: var(--primary-color);
+}
+.loginWithEmailAndPassword main form .ui.button {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+.loginWithEmailAndPassword main form .field label {
+  font-size: var(--text-size) !important;
+  color: var(--text-color) !important;
+}
+.loginWithEmailAndPassword main form .field input {
+  font-size: var(--text-size) !important;
+}
+.loginWithEmailAndPassword footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: var(--text-size);
+}
+.loginWithEmailAndPassword footer p {
+  color: var(--text-color) !important;
+
 }
