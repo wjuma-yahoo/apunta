@@ -187,5 +187,46 @@ body {
 }
 .loginWithEmailAndPassword footer p {
   color: var(--text-color) !important;
+}
 
+/********************************************************
+  REGISTER
+********************************************************/
+.register {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-light);
+}
+.register .container {
+  width: 100%;
+}
+.register .heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.register .heading h1 {
+  font-weight: 900;
+  color: var(--primary-color);
+}
+.register form .field label {
+  font-size: var(--text-size) !important;
+  color: var(--text-color) !important;
+}
+.register form .field input {
+  font-size: var(--text-size) !important;
+}
+.register form .ui.button {
+  margin-top: 25px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+.register footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: var(--text-size);
+}
+.register footer p {
+  color: var(--text-color) !important;
 }

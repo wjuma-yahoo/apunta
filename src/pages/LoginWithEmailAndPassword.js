@@ -1,6 +1,21 @@
-import { Header } from '../components';
+import { Link } from 'react-router-dom';
+import { useForm } from '../hooks/useForm';
 
 export const LoginWithEmailAndPassword = ({ setStartWithEmail }) => {
+
+  const { formValues, onHandlerFormChange } = useForm({
+    email: '',
+    password: ''
+  });
+
+  const { email, password } = formValues;
+
+  const onHandlerFormSubmit = (event) => {
+    event.preventDefault();
+
+    console.log('Form submited!');
+  }
+
   return (
     <div className="row loginWithEmailAndPassword">
 
@@ -18,14 +33,29 @@ export const LoginWithEmailAndPassword = ({ setStartWithEmail }) => {
             <h1>Iniciar sesión</h1>
           </div>
 
-          <form className="ui form col-md-12">
+          <form
+            className="ui form col-md-12"
+            onSubmit={onHandlerFormSubmit}
+          >
             <div className="field">
               <label>Correo electrónico</label>
-              <input type="email" name="email" placeholder="Correo electrónico" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Correo electrónico"
+                value={email}
+                onChange={onHandlerFormChange}
+              />
             </div>
             <div className="field">
               <label>Contraseña</label>
-              <input type="password" name="password" placeholder="Contraseña" />
+              <input
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                value={password}
+                onChange={onHandlerFormChange}
+              />
             </div>
             <button className="ui fluid big button" type="submit">Entrar</button>
           </form>
@@ -33,7 +63,7 @@ export const LoginWithEmailAndPassword = ({ setStartWithEmail }) => {
       </main>
 
       <footer className="col-md-12 mb-5 footer">
-        <p>No tienes una cuenta? <a href="/register">Registrate</a> </p>
+        <p>No tienes una cuenta? <Link to="/register">Registrate</Link> </p>
       </footer>
 
     </div>
